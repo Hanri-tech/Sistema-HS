@@ -1,0 +1,63 @@
+<div th:insert="header :: topo"></div>
+<head>
+    <meta charset="utf-8">
+</head>
+<div class="mx-auto" style="width: 90%">
+<div class="w-100 p-3">
+		
+		
+		<div class="w-75 p-3">
+	<form action="#" th:action="@{/ordens/atualizar}" th:object="${ordemServico}" method="post">
+	<input type="hidden" th:field="*{id}" value="${id}" />
+
+
+		<div class="form-group">
+			<label for="inputAddress">Colaborador</label>
+			<select class="form-control" name="id_colaborador" required>
+				<option  value="" disabled selected>Escolha</option>
+				<option th:each="colaborador : ${colaboradores}" th:value="${colaborador.id}" th:text="${colaborador.nome}"></option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="inputAddress">Usuario</label>
+			<select class="form-control" name="id_usuario" required>
+				<option  value="" disabled selected>Escolha</option>
+				<option th:each="usuario : ${usuarios}" th:value="${usuario.id}" th:text="${usuario.nome}"></option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="inputAddress">Categoria</label>
+			<select class="form-control" name="id_categoria" required>
+				<option  value="" disabled selected>Escolha</option>
+				<option th:each="categoria : ${categorias}" th:value="${categoria.id}" th:text="${categoria.nome}"></option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="inputEmail4">Valor</label>
+			<input type="text" name="titulo" class="form-control" id="inputAddress" placeholder="valor" required>
+		</div>
+
+
+		<div class="form-group">
+			<label for="inputEmail4">Descricao</label>
+			<input type="text" name="descricao" class="form-control" id="inputAddress" placeholder="Descricao" required>
+		</div>
+
+		<div class="form-group">
+			<label for="inputEmail4">Data Abertura</label>
+			<input type="date" name="dataAbertura" class="form-control" id="inputAddress" placeholder="Data Abertura" required>
+		</div>
+
+		<div class="form-group">
+			<label for="inputEmail4">Data Final</label>
+			<input type="date" name="dataFechado" class="form-control" id="inputAddress" placeholder="Data Final" required>
+		</div>
+	
+     <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+</div>
+</div>
+<div th:insert="footer :: rodape"></div>

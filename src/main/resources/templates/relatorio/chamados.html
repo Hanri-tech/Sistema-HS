@@ -1,0 +1,27 @@
+<div th:insert="header :: topo"></div>
+<head>
+    <meta charset="utf-8">
+</head>
+<center><h4><strong>RELATORIO</strong></h4></center>
+<div class="mx-auto" style="width: 90%">
+<!--<div class="w-100 p-3">-->
+<br><br>
+
+  <table id="example" class="table table-sm table-striped">
+  <thead>
+    <tr>
+		<center><th scope="col">Total de Chamados em Aberto</th><center>
+    </tr>
+  </thead>
+		<tbody>		
+			<tr th:each="chamado : ${chamados}">
+				<td><strong><span th:text="${chamado.qtdChamados}"></span></strong></td>
+			</tr>
+		</tbody>
+		</table>
+		
+	
+		</div>
+  </div>
+<br><br><br><br>
+<div th:insert="footer :: rodape"></div>

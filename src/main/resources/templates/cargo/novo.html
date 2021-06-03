@@ -1,0 +1,22 @@
+<div th:insert="header :: topo"></div>
+<head>
+    <meta charset="utf-8">
+</head>
+<div class="mx-auto" style="width: 90%">
+<div class="w-100 p-4">
+		
+		
+		<div class="w-50 p-3">
+	<form action="/cargos/salvar" method="post">
+	
+	
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nome</label>
+      <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Nome" required>
+    </div>
+	
+	 <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+</div>
+</div>
+<div th:insert="footer :: rodape"></div>

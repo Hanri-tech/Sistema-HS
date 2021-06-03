@@ -1,0 +1,23 @@
+<div th:insert="header :: topo"></div>
+<head>
+    <meta charset="utf-8">
+</head>
+<div class="mx-auto" style="width: 90%">
+<div class="w-100 p-3">
+		
+		
+		<div class="w-75 p-3">
+	<form action="#" th:action="@{/cargos/atualizar}" th:object="${cargo}" method="post">
+	<input type="hidden" th:field="*{id}" value="${id}" />
+
+
+		<div class="form-group col-md-6">
+			<label for="inputEmail4">Nome</label>
+			<input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Nome" required>
+		</div>
+	
+     <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+</div>
+</div>
+<div th:insert="footer :: rodape"></div>
